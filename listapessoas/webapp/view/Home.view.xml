@@ -1,0 +1,14 @@
+<mvc:View controllerName="com.wsl.listapessoas.controller.Home"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="homePage" title="Pessoas">
+        <content>
+          <SearchField id="searchField" search="onSearch" placeholder="Pesquisar..." />
+          <List id="personList" items="{PersonModel>/pessoas}" >
+            <items>
+              <StandardListItem press="onPress" type="Navigation" id="person" title="{PersonModel>nome} {PersonModel>sobrenome}" description="Idade: {PersonModel>idade}"></StandardListItem>
+            </items>
+          </List>
+        </content>
+    </Page>
+</mvc:View>

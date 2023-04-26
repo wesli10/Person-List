@@ -1,0 +1,26 @@
+<mvc:View xmlns:layout="sap.ui.layout.form" controllerName="com.wsl.listapessoas.controller.Detail"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="pageTitle" title="Detalhes">
+        <layout:SimpleForm
+            id="simpleForm" editable="true" layout="ResponsiveGridLayout" labelSpanL="3" labelSpanM="3" emptySpanL="4" emptySpanM="4" columnsL="1"
+        >
+            <layout:content>
+                <Label text="Nome" />
+                <Input id="personName" value="{myModel>/nome}" />
+                <Label text="Sobrenome" />
+                <Input id="personLastName" value="{myModel>/sobrenome}" />
+                <Label text="Endereço" />
+                <Input id="personAddress" value="{myModel>/endereco}" />
+                <Label text="Data de Nascimento" />
+                <Input id="personDate" value="{myModel>/ano_nascimento}" />
+                <Label text="Idade" />
+                <Input id="personAge" value="{myModel>/idade}" />
+                <Label text="CPF" />
+                <Input id="personCPF" value="{myModel>/cpf}" /> 
+            </layout:content>
+        </layout:SimpleForm>
+        <Button width="270px" text="Salvar" press="onSave" />
+
+    </Page>
+</mvc:View>
